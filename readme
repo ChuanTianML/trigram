@@ -1,7 +1,18 @@
-vocab.py
-ngram.py
-computePmi.py
-computePmiUsLm.py
-averagePmi.py
-proc.sh
-statistics
+# train trigram language model, and compute <title,comment> pmi
+
+    vocab.py            # static vocabulary
+
+    ngram.py            # train trigram language model
+                        # Kneser-Ney smoothing method is used.
+
+    computePmi.py       # conditional probability is computed using "conditional corpus".
+                        # simple smoothing method is used.
+
+    computePmiUsLm.py   # conditional probability is given.
+                        # Kneser-Ney smoothing method is used.
+
+    averagePmi.py       # compute "average pmi" of each comment
+
+    proc.sh             # the shell to run those programs, and does some processing.
+
+    statistics/         # the directory to save trigram model and vocabulary.
